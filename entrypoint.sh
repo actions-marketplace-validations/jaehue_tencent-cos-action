@@ -22,6 +22,16 @@ if [ -z "$INPUT_BUCKET" ]; then
   exit 1
 fi
 
+if [ -z "$INPUT_REGION" ]; then
+  echo '::error::Required Region parameter'
+  exit 1
+fi
+
+if [ -z "$INPUT_ENDPOINT" ]; then
+  echo '::error::Required Endpoint parameter'
+  exit 1
+fi
+
 coscmd config -a $INPUT_SECRET_ID -s $INPUT_SECRET_KEY -b $INPUT_BUCKET -r $INPUT_REGION -e $INPUT_ENDPOINT -m 30
 
 IFS="&&"
