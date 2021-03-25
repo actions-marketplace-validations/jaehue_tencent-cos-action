@@ -1,4 +1,4 @@
-name: 'Tencent COS Action'
+name: 'Tencent COS Action with endpoint'
 description: 'GitHub Action for Tencent COS Command (coscmd)'
 author: 'jaehue <bbugguj@gmail.com>'
 branding:
